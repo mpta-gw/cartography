@@ -1,0 +1,677 @@
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/matapps/!svn/ver/6460/packages/stochastic/trunk/lib/spherelib
+END
+figdisp.m
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/matapps/!svn/ver/6427/packages/stochastic/trunk/lib/spherelib/figdisp.m
+END
+hipass.m
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/matapps/!svn/ver/6427/packages/stochastic/trunk/lib/spherelib/hipass.m
+END
+spectrogramOpenSource.m
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/matapps/!svn/ver/6427/packages/stochastic/trunk/lib/spherelib/spectrogramOpenSource.m
+END
+rsh2cpx.m
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/matapps/!svn/ver/6427/packages/stochastic/trunk/lib/spherelib/rsh2cpx.m
+END
+cpx2rsh.m
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/matapps/!svn/ver/6427/packages/stochastic/trunk/lib/spherelib/cpx2rsh.m
+END
+wigner.m
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/matapps/!svn/ver/6427/packages/stochastic/trunk/lib/spherelib/wigner.m
+END
+bandpass.m
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/matapps/!svn/ver/6427/packages/stochastic/trunk/lib/spherelib/bandpass.m
+END
+rotcof.m
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/matapps/!svn/ver/6427/packages/stochastic/trunk/lib/spherelib/rotcof.m
+END
+grcazim.m
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/matapps/!svn/ver/6427/packages/stochastic/trunk/lib/spherelib/grcazim.m
+END
+movev.m
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/matapps/!svn/ver/6427/packages/stochastic/trunk/lib/spherelib/movev.m
+END
+suf.m
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/matapps/!svn/ver/6427/packages/stochastic/trunk/lib/spherelib/suf.m
+END
+even.m
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/matapps/!svn/ver/6427/packages/stochastic/trunk/lib/spherelib/even.m
+END
+blanco.m
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/matapps/!svn/ver/6427/packages/stochastic/trunk/lib/spherelib/blanco.m
+END
+libbrecht.m
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/matapps/!svn/ver/6427/packages/stochastic/trunk/lib/spherelib/libbrecht.m
+END
+rindeks.m
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/matapps/!svn/ver/6427/packages/stochastic/trunk/lib/spherelib/rindeks.m
+END
+isav.m
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/matapps/!svn/ver/6427/packages/stochastic/trunk/lib/spherelib/isav.m
+END
+plotcont.m
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/matapps/!svn/ver/6427/packages/stochastic/trunk/lib/spherelib/plotcont.m
+END
+mckenzie.m
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/matapps/!svn/ver/6427/packages/stochastic/trunk/lib/spherelib/mckenzie.m
+END
+pchave.m
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/matapps/!svn/ver/6427/packages/stochastic/trunk/lib/spherelib/pchave.m
+END
+openup.m
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/matapps/!svn/ver/6427/packages/stochastic/trunk/lib/spherelib/openup.m
+END
+adrc.m
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/matapps/!svn/ver/6427/packages/stochastic/trunk/lib/spherelib/adrc.m
+END
+unproject.m
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/matapps/!svn/ver/6427/packages/stochastic/trunk/lib/spherelib/unproject.m
+END
+wc.m
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/matapps/!svn/ver/6427/packages/stochastic/trunk/lib/spherelib/wc.m
+END
+wtimax.m
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/matapps/!svn/ver/6427/packages/stochastic/trunk/lib/spherelib/wtimax.m
+END
+addmup.m
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/matapps/!svn/ver/6427/packages/stochastic/trunk/lib/spherelib/addmup.m
+END
+datafit.m
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/matapps/!svn/ver/6427/packages/stochastic/trunk/lib/spherelib/datafit.m
+END
+loading.m
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/matapps/!svn/ver/6427/packages/stochastic/trunk/lib/spherelib/loading.m
+END
+indeks.m
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/matapps/!svn/ver/6427/packages/stochastic/trunk/lib/spherelib/indeks.m
+END
+shcos.m
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/matapps/!svn/ver/6427/packages/stochastic/trunk/lib/spherelib/shcos.m
+END
+supertit.m
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/matapps/!svn/ver/6427/packages/stochastic/trunk/lib/spherelib/supertit.m
+END
+fbank.m
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/matapps/!svn/ver/6427/packages/stochastic/trunk/lib/spherelib/fbank.m
+END
+revolve.m
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/matapps/!svn/ver/6427/packages/stochastic/trunk/lib/spherelib/revolve.m
+END
+plotonsphere.m
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/matapps/!svn/ver/6427/packages/stochastic/trunk/lib/spherelib/plotonsphere.m
+END
+shsin.m
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/matapps/!svn/ver/6427/packages/stochastic/trunk/lib/spherelib/shsin.m
+END
+xyz2plm.m
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/matapps/!svn/ver/6427/packages/stochastic/trunk/lib/spherelib/xyz2plm.m
+END
+plm2xyz.m
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/matapps/!svn/ver/6427/packages/stochastic/trunk/lib/spherelib/plm2xyz.m
+END
+decay.m
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/matapps/!svn/ver/6427/packages/stochastic/trunk/lib/spherelib/decay.m
+END
+prodco.m
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/matapps/!svn/ver/6427/packages/stochastic/trunk/lib/spherelib/prodco.m
+END
+simpson.m
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/matapps/!svn/ver/6427/packages/stochastic/trunk/lib/spherelib/simpson.m
+END
+gausslegendre.m
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/matapps/!svn/ver/6427/packages/stochastic/trunk/lib/spherelib/gausslegendre.m
+END
+lowpass.m
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/matapps/!svn/ver/6427/packages/stochastic/trunk/lib/spherelib/lowpass.m
+END
+longitude.m
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/matapps/!svn/ver/6427/packages/stochastic/trunk/lib/spherelib/longitude.m
+END
+knum2.m
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/matapps/!svn/ver/6427/packages/stochastic/trunk/lib/spherelib/knum2.m
+END
+pxynrm.m
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/matapps/!svn/ver/6427/packages/stochastic/trunk/lib/spherelib/pxynrm.m
+END
+getpos.m
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/matapps/!svn/ver/6427/packages/stochastic/trunk/lib/spherelib/getpos.m
+END
+defval.m
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/matapps/!svn/ver/6427/packages/stochastic/trunk/lib/spherelib/defval.m
+END
+transl.m
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/matapps/!svn/ver/6427/packages/stochastic/trunk/lib/spherelib/transl.m
+END
+makewc.m
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/matapps/!svn/ver/6427/packages/stochastic/trunk/lib/spherelib/makewc.m
+END
+plotnorm.m
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/matapps/!svn/ver/6427/packages/stochastic/trunk/lib/spherelib/plotnorm.m
+END
+flipflop.m
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/matapps/!svn/ver/6427/packages/stochastic/trunk/lib/spherelib/flipflop.m
+END
+latitude.m
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/matapps/!svn/ver/6427/packages/stochastic/trunk/lib/spherelib/latitude.m
+END
+boxcap.m
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/matapps/!svn/ver/6427/packages/stochastic/trunk/lib/spherelib/boxcap.m
+END
+liftco.m
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/matapps/!svn/ver/6427/packages/stochastic/trunk/lib/spherelib/liftco.m
+END
+writesac.m
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/matapps/!svn/ver/6427/packages/stochastic/trunk/lib/spherelib/writesac.m
+END
+seemax.m
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/matapps/!svn/ver/6427/packages/stochastic/trunk/lib/spherelib/seemax.m
+END
+fralmanac.m
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/matapps/!svn/ver/6427/packages/stochastic/trunk/lib/spherelib/fralmanac.m
+END
+parker.m
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/matapps/!svn/ver/6427/packages/stochastic/trunk/lib/spherelib/parker.m
+END
+jackknife.m
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/matapps/!svn/ver/6427/packages/stochastic/trunk/lib/spherelib/jackknife.m
+END
+scale.m
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/matapps/!svn/ver/6427/packages/stochastic/trunk/lib/spherelib/scale.m
+END
+wigner3j.m
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/matapps/!svn/ver/6427/packages/stochastic/trunk/lib/spherelib/wigner3j.m
+END
+star69.m
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/matapps/!svn/ver/6427/packages/stochastic/trunk/lib/spherelib/star69.m
+END
+th2pl.m
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/matapps/!svn/ver/6427/packages/stochastic/trunk/lib/spherelib/th2pl.m
+END
+pl2th.m
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/matapps/!svn/ver/6427/packages/stochastic/trunk/lib/spherelib/pl2th.m
+END
+intersub.m
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/matapps/!svn/ver/6427/packages/stochastic/trunk/lib/spherelib/intersub.m
+END
+threshold.m
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/matapps/!svn/ver/6427/packages/stochastic/trunk/lib/spherelib/threshold.m
+END
+shrink.m
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/matapps/!svn/ver/6427/packages/stochastic/trunk/lib/spherelib/shrink.m
+END
+plm2rot.m
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/matapps/!svn/ver/6427/packages/stochastic/trunk/lib/spherelib/plm2rot.m
+END
+addmon.m
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/matapps/!svn/ver/6427/packages/stochastic/trunk/lib/spherelib/addmon.m
+END
+iwt.m
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/matapps/!svn/ver/6427/packages/stochastic/trunk/lib/spherelib/iwt.m
+END
+fftaxis.m
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/matapps/!svn/ver/6427/packages/stochastic/trunk/lib/spherelib/fftaxis.m
+END
+fig2print.m
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/matapps/!svn/ver/6427/packages/stochastic/trunk/lib/spherelib/fig2print.m
+END
+gamini.m
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/matapps/!svn/ver/6427/packages/stochastic/trunk/lib/spherelib/gamini.m
+END
+polyphase.m
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/matapps/!svn/ver/6427/packages/stochastic/trunk/lib/spherelib/polyphase.m
+END
+sdwtarget.m
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/matapps/!svn/ver/6427/packages/stochastic/trunk/lib/spherelib/sdwtarget.m
+END
+triangle.m
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/matapps/!svn/ver/6427/packages/stochastic/trunk/lib/spherelib/triangle.m
+END
+plm2th.m
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/matapps/!svn/ver/6427/packages/stochastic/trunk/lib/spherelib/plm2th.m
+END
+wtlift.m
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/matapps/!svn/ver/6427/packages/stochastic/trunk/lib/spherelib/wtlift.m
+END
+nounder.m
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/matapps/!svn/ver/6427/packages/stochastic/trunk/lib/spherelib/nounder.m
+END
+pchavedemo.m
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/matapps/!svn/ver/6427/packages/stochastic/trunk/lib/spherelib/pchavedemo.m
+END
+legendreroots.m
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/matapps/!svn/ver/6427/packages/stochastic/trunk/lib/spherelib/legendreroots.m
+END
+abank.m
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/matapps/!svn/ver/6427/packages/stochastic/trunk/lib/spherelib/abank.m
+END
+legendrecof.m
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/matapps/!svn/ver/6427/packages/stochastic/trunk/lib/spherelib/legendrecof.m
+END
+dlmb.m
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/matapps/!svn/ver/6427/packages/stochastic/trunk/lib/spherelib/dlmb.m
+END
+pxyerh.m
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/matapps/!svn/ver/6427/packages/stochastic/trunk/lib/spherelib/pxyerh.m
+END
+gausslegendrecof.m
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/matapps/!svn/ver/6427/packages/stochastic/trunk/lib/spherelib/gausslegendrecof.m
+END
+grunbaum.m
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/matapps/!svn/ver/6427/packages/stochastic/trunk/lib/spherelib/grunbaum.m
+END
+mollweide.m
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/matapps/!svn/ver/6427/packages/stochastic/trunk/lib/spherelib/mollweide.m
+END
+nsubm.m
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/matapps/!svn/ver/6427/packages/stochastic/trunk/lib/spherelib/nsubm.m
+END
+graphs.m
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/matapps/!svn/ver/6427/packages/stochastic/trunk/lib/spherelib/graphs.m
+END
+imagefnan.m
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/matapps/!svn/ver/6427/packages/stochastic/trunk/lib/spherelib/imagefnan.m
+END
+plm2spec.m
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/matapps/!svn/ver/6427/packages/stochastic/trunk/lib/spherelib/plm2spec.m
+END
+dnums.m
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/matapps/!svn/ver/6427/packages/stochastic/trunk/lib/spherelib/dnums.m
+END
+denoise.m
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/matapps/!svn/ver/6427/packages/stochastic/trunk/lib/spherelib/denoise.m
+END
+plotplm.m
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/matapps/!svn/ver/6427/packages/stochastic/trunk/lib/spherelib/plotplm.m
+END
+xtraxis1d.m
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/matapps/!svn/ver/6427/packages/stochastic/trunk/lib/spherelib/xtraxis1d.m
+END
+imagef.m
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/matapps/!svn/ver/6427/packages/stochastic/trunk/lib/spherelib/imagef.m
+END
+plm.m
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/matapps/!svn/ver/6427/packages/stochastic/trunk/lib/spherelib/plm.m
+END
+orthocheck.m
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/matapps/!svn/ver/6427/packages/stochastic/trunk/lib/spherelib/orthocheck.m
+END
+fftaxis1D.m
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/matapps/!svn/ver/6427/packages/stochastic/trunk/lib/spherelib/fftaxis1D.m
+END
+wt.m
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/matapps/!svn/ver/6427/packages/stochastic/trunk/lib/spherelib/wt.m
+END
+pref.m
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/matapps/!svn/ver/6427/packages/stochastic/trunk/lib/spherelib/pref.m
+END
+forsyth.m
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/matapps/!svn/ver/6427/packages/stochastic/trunk/lib/spherelib/forsyth.m
+END
+sbank.m
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/matapps/!svn/ver/6427/packages/stochastic/trunk/lib/spherelib/sbank.m
+END
+grcdist.m
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/matapps/!svn/ver/6427/packages/stochastic/trunk/lib/spherelib/grcdist.m
+END
+plotonearth.m
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/matapps/!svn/ver/6427/packages/stochastic/trunk/lib/spherelib/plotonearth.m
+END
+xlm.m
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/matapps/!svn/ver/6427/packages/stochastic/trunk/lib/spherelib/xlm.m
+END
+ylm.m
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/matapps/!svn/ver/6427/packages/stochastic/trunk/lib/spherelib/ylm.m
+END
+readsac.m
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/matapps/!svn/ver/6427/packages/stochastic/trunk/lib/spherelib/readsac.m
+END
+linazim.m
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/matapps/!svn/ver/6427/packages/stochastic/trunk/lib/spherelib/linazim.m
+END
+osdep.m
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/matapps/!svn/ver/6427/packages/stochastic/trunk/lib/spherelib/osdep.m
+END
+moveh.m
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/matapps/!svn/ver/6427/packages/stochastic/trunk/lib/spherelib/moveh.m
+END
+landd.m
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/matapps/!svn/ver/6427/packages/stochastic/trunk/lib/spherelib/landd.m
+END
