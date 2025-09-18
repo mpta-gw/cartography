@@ -1,0 +1,24 @@
+### BEGIN FILE ###
+
+# PayPal robots.txt file 
+# Allow Google to spider the PayPal site
+User-agent: GoogleBot
+Disallow: 
+
+# Allow MSN to spider the PayPal site
+User-agent: MSNBot
+Disallow: 
+
+# Allow Yahoo! to spider the PayPal site
+User-agent: Slurp
+Disallow: 
+
+# Baiduspider
+User-agent: baiduspider
+Disallow:
+
+User-agent: *
+Disallow: /
+
+### END FILE ###
+

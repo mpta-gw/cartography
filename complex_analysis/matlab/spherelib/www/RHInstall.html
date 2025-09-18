@@ -1,0 +1,431 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html><head>
+<title>My Red Hat 7.3 Linux installation on a Dell Inspiron 2650</title>
+</head>
+
+<body>
+<h1>My <font color="red">Red Hat 7.3</font> Linux installation<br>
+on a <font color="blue">Dell Inspiron 2650</font></h1>
+
+<p><b>System specifications</b></p>
+
+<ol>
+  <table cellpadding="5" border="1">
+    <th>Item</th><th>Type</th><th>Details</th>
+	<tr><td>Processor</td><td>Pentium 4</td><td>1.7 GHz</td></tr>
+	<tr><td>Memory</td><td>RAM</td><td>256 MB</td></tr>
+	<tr><td>Hard disk</td><td>Hitachi</td><td>40 GB</td></tr>
+	<tr><td>Graphics</td><td>NVidia</td><td>GeForce 2 Go</td></tr>
+  </table>
+</ol>
+
+<p><b>A complete overhaul after trouble</b></p>
+
+<ol>
+<li>From the Windows XP Home Edition Reinstallation disk, deleted all
+partitions and reformatted drive. Space available is 38,155 MB.
+<li>From the Inspiron 2650 System Software Reinstallation disk,
+install. Not really necessary.
+<li>From the Roxio Reinstallation disk, install Complete CD Creator
+software. Optional.
+</ol>
+
+<p>
+<b>Preliminary steps</b>
+</p>
+<ol>
+  <p>
+  Gather information about the computer, cards, screen, etcetera,
+  from within Windows XP before you start, as follows:</p>
+  <li>Type <i>specifications</i> in the <i>Help and Support Center</i></li>
+  <li>Type <i>msconfig</i> in the <i>Run...</i> Start menu
+      option. Turns out there was a "ghost" XP boot file; <i>checking</i>
+      that particular <command>boot.ini</command> made it go away.</li>
+  <li>Find and run <i>device manager</i> to check for installed devices</li>
+  <li>Change <i>display settings</i> to find out it allows maximum 1024x768 pixels
+</ol>
+</p>
+
+<p><b>Partitioning the hard disk under installed Windows XP</b></p>
+
+<ol>
+  <li>Using <b>PowerQuest PartitionMagic 7.0</b> (serial number can
+      be bogus and the program will still continue; don't bother looking one
+      up), make a new partition (which is automatically called
+      <command>E:</command>) as <i>logical</i>, <b>FAT</b> (one other
+      choice, NTFS, will not work ), and make this very small, e.g. 8
+      MB.</li> 
+  <li>Resize the <b>NTFS</b> Windows <command>C:</command> partition (I chose
+      7000 MB on the 20 GB disk and 14000 MB on the 40 GB disk), while
+      checking that the freed-up space be given to your just created
+      dummy partition</li>
+  <li>Reboot, hold F2 to enter BIOS, make sure it boots from the CDROM
+      before the hard disk. Save and exit.</li>
+</ol>
+
+<p><b>Partitioning the hard disk under Red Hat 7.3 while installing it</b></p>
+
+
+<ol>
+  <p>Note: Usually there can only be four <i>primary</i> partitions, and
+  <i>/boot</i> needs to be in the first 1024 blocks. This is possibly
+  forced by the program, although there is an option later on to allow
+  for a <i>/boot</i> in posterior sectors.</p>
+    <li>Put in Red Hat Installation CD 1 of 3 and reboot again. Note
+	that <command>CTRL+ALT+DELETE</command> will leave the
+	installation program in most cases.</li>
+  <li>Install in <i>graphical mode</i>, as a <i>server</i> (not
+      <i>laptop</i>).</li> 
+  <li>Choose <i>generic 105-key keyboard</i>, <i>Logitech Mouseman Wheel USB
+      mouse</i>.</li>
+  <li>Elect to use <b>diskdruid</b> program, rather than
+      <b>fdisk</b>. You'll find a bunch of partitions already
+      there. With the laptop might have come a Dell Utility partition
+      <b>/dev/hda1/</b>, this was not there anymore after the XP
+      reinstallation. Guess it's not critical.</li>
+  <li>Delete whatever else there might be that is not Windows, but keep
+      the Dell Utility if it is there (in which case this is <b>/hda1</b>
+      and of type <i>vfat</i>) and the Windows partition, which is is
+      <i>primary</i> partition called <b>/hda1</b> (or <b>/hda2</b> if
+      Dell Utility is there), and which is of type <i>NTFS</i>. It's
+      not a bad idea at this point to define a mountpoint for Windows
+      as e.g. <command>/usr/windows</command>, although later on you can
+      use <i>mount</i> for that purpose.</li>
+  <li>Start adding partitions. First, add a (forced to be)
+      <i>primary</i> partition with mountpoint <i>/boot</i> and of type
+      <i>ext3</i>. It'll automatically be called <b>/hda2</b> (we now
+      give the case where Dell Utility is not present; if not all
+      numbers are to be augmented by 1).</li>
+  <li>Second, add the (forced to be) <i>primary</i> partition with
+      mountpoint <i>/home</i> and of type <i>ext3</i>. This will
+      become <b>/hda3</b>, and you want to <i>fill it to capacity</i>.</li>
+  <li>Keep adding, one after another, <i>logical</i> (not <i>primary</i>
+      partitions of the following types/sizes/mountpoints according to
+      the table below.
+      <p>
+      <table border="1">
+	<th>Device name</th><th>Type</th><th>Mount point</th><th>Size</th><th>Comment</th>
+	    <tr>
+	      <td>/hda1</td><td>NTFS</td><td>/usr/windows</td><td>14000 MB</td><td>was
+		  already there, and maybe also the Dell Utility
+		  partition</td>
+	    </tr>
+	    <tr><td>/hda2</td><td>ext3</td><td>/boot</td><td>48
+		MB</td><td>primary, make this the first you create</td><td></td>
+	      </tr>
+	      <tr><td>/hda3</td><td>ext3</td><td>/home</td><td>fill to
+		  capacity</td><td>primary; even if created out of order will get a
+		number less than 4.</td>
+		</tr>
+		<tr><td>/hda5</td><td>ext3</td><td>/usr/</td><td>8096
+		    MB</td>
+	      </tr> 
+	      <tr><td>/hda6</td><td>ext3</td><td>/usr/local</td><td>4096
+		  MB</td>
+	    </tr>
+	    <tr><td>/hda7</td><td>ext3</td><td>/var</td><td>2048 MB</td>
+	  </tr>
+	  <tr><td>/hda8</td><td>fat16</td><td>/shared</td><td>2048MB</td><td>bigger
+	      may not be allowed</td>
+	</tr> 
+	<tr><td>/hda9</td><td>ext3</td><td>/tmp</td><td>1024 MB</td>
+      </tr>
+      <tr><td>/hda10</td><td>ext3</td><td>/</td><td>512 MB</td>
+    </tr>
+    <tr><td>/hda11</td><td>swap</td><td>not applicable</td><td>512
+	MB</td><td>at least twice the RAM, but edit to fill capacity if
+	    there is any space left after the full partitioning</td>
+      </tr>   
+      <tr><td>/hda4</td><td>extended</td><td colspan="2">just a subdivided
+	  header</td><td>encompasses the logicals</td>
+	</tr>
+  </table>
+  </p>
+</li>
+<li> Put the boot loader (<b>GRUB</b>) in the master boot record
+(<b>MBR</b>) indeed.</li>
+<li>Add boot labels to <i>/dev/hda10</i> (ext3) e.g. as <i>RedHat Linux
+    7.3</i> and <i>/dev/hda1</i> (ntfs) as <i>Windows XP</i>. If it
+    believes there is a DOS boot on the shared disk, it won't be true
+    and simply deleting its label will get rid of it as a GRUB
+    option. Later on, check <i>/boot/grub/grub.conf</i>.</li>
+<li>
+Set <i>GRUB</i> password. Accept <i>eth0</i> and
+<i>DHCP</i> and activate <i>ONBOOT</i>.</li>
+<li>Set <i>security</i> to <b>high</b> and use <i>default firewall
+    rules</i>.</li>
+<li>Keep languages <i>Dutch</i>, <i>French</i>, <i>Icelandic</i>,
+    <i>Greek</i>.</li>
+<li>Set root password and new user names.</li>
+<li>Install <b>GNOME</b>, <b>KDE</b>, <b>X</b> and <b>Classic
+    X</b>.</li>
+<li>Definitely create a <b>boot disk</b>. This changes with every
+    individual installation, so you need to keep one current.
+<li>Choose the <b>NVIDIA</b> card but see below.</li>
+<li>Monitor specs are <i>Dell 1024X Laptop Display</i> and next, make
+    sure to adjust to a <b>text login</b> only. Without the proper
+    graphics card installed, the <i>graphical login</i> will cause you
+    much, much trouble. Check <i>True Color (24 bit)</i> and screen
+    resolution <i>1024x768</i>.
+<li><b>Do NOT test settings</b> - system will crash, and
+    <command>CTRL+ALT+BACKSPACE</command> which usually leaves the X
+    system, won't work. Also <command>CTRL+ALT+F7</command> to switch
+    to text login won't work. (If it crashed like this, pushing all
+    sorts of buttons might cause it to reboot. Need to start from
+    scratch. Put in Disk 1 again, go through full system installation,
+    not upgrade, including mountpoint redefinitions of already made
+    partitions.</li>
+<li>Text login hung. <command>CTRL-Q</command> seemed to force
+    quit. <command>CTRL-F1</command> and <command>CTRL-F2</command>
+    switch login modes.</li>
+</ol>
+
+<p>
+<b>Installation of the NVIDIA driver:</b>
+</p>
+
+<ol>
+<p>Try to do this as root from a text login asap.</p>
+  <li><command>ftp download.nvidia.com<br>
+      cd XFree86_40<br>
+      cd 1.0-3123<br>
+      bin<br>
+      get NVIDIA_GLX-1.0-3123.i386.rpm (1768048 bytes)<br>
+      get NVIDIA_kernel-1.0-3123.rh73up.i686.rpm (396965
+      bytes)</command>
+  </li>
+  <li>Take the right version, if not, you'll get complaints about
+      unresolved symbols. Keep the files in
+      <i>/usr/src/redhat/RPMS/i686</i>.</li>
+  <li>Check file sizes, etc, to see if they have been downloaded
+      properly, if not, you'll get </i>cpio:read</i> errors down the
+      line.</li>      
+  <li>Type <b>rpm -ivh NVIDIA_kernel-1.0-3123.rh73up.i686.rpm</b> to install;
+      you should get only ### if installation is successful.</li>
+  <li>Type <b>rpm -ivh NVIDIA_GLX-1.0-3123.i386.rpm</b> to
+      install. Some (stale) <i>lib</i> files may be renamed in the process.</li>
+  <li>See <i>/usr/share/doc/NVIDIA_GLX-1.0/README</i> for more documentation
+      and a sample <i>XF86Config-4</i> file. This is a sample file of the type
+      that will be read by <b>startx</b> and used to configure the
+      X-server.</li>
+  <li>Remove <i>Load "dri"</i> and <i>Load "GLCore"</i> from
+      <i>/etc/X11/XF86Config-4</i>, change the <i>Device</i> <i>Driver
+      "nv"</i> to <i>Driver "nvidia"</i>, and make sure you have not
+      uncommented <i>Load "glx"</i>. Switch CTRL and CAPS in this file
+      too, where indicated. Remove <i>Driver "blabla"</i> from <i>Section
+      Screen</i>.</li>
+  <li>Installation should have resulted in a file called
+      <i>/lib/modules/2.4.18-3/kernel/drivers/video/NVdriver</i> (not
+      a text file) that <b>startx</b> will want to load every time;
+      <b>/sbin/modprobe</b> and <b>/sbin/insmod</b> can be used
+      to load modules forcefully. File <i>/sbin/lsmod</i> (not a textfile)
+      should be updated if the module is loaded.</li>
+  <li><b>/sbin/lspci</b> can tell you whether nVidia is on the PCI list</li>
+  <li>Messages from <b>startx</b> will appear in
+      <i>/var/log/XFree86.0.log</i> (Errors as (EE)); this file will tell
+      you that the file loaded is <i>/etc/X11/XF86Config-4</i>. This latter
+      file is what you need to update (rather than replace), with the sample
+      provided by NVIDIA. If you've listed NVidia's card and the monitor
+      during installation, this file will be simple, and updating them even
+      simpler.</li>
+  <li>Check <a href="XF86Config-4.html">here</a> for my current
+      <i>XF86Config-4</i> file. 
+</ol>
+
+<p>
+<b>Files to check for smooth installation:</b>
+</p>
+
+<ol>
+<li><i>/etc/sysconfig/network</i>
+<ul><li>NETWORKING=yes
+<li>HOSTNAME='gezelle.geophysics.princeton.edu'
+<li>GATEWAY=192.168.0.1
+<li>GATEWAYDEV=eth0</ul>
+<li><i>/etc/resolv.conf</i>
+<ul><li>nameserver 192.168.1.17
+<li>search geophysics.princeton.edu</ul>
+<li><i>/etc/sysconfig/network-scripts/ifcfg-eth0</i>
+<ul><li>DEVICE=eth0
+<li>BOOTPROTO=dhcp
+<li>ONBOOT=yes
+<li>GATEWAY=192.168.0.1
+<li>NETMASK=255.255.255.0
+<li>IPADDR=192.169.0.162</ul>
+    <li>Make sure you have <i>.emacs</i>, <i>.cshrc</i>,
+	<i>.alias</i>, <i>.environ</i>, <i>matlab.el</i>. 
+    <li>Check <a href="network.html">here</a> for network settings and
+	more. 
+</ol>
+
+<p> <b> Which operating system installed?</b> </p> <p> Type <b>uname
+-r</b> to find it as 2.4.18-3, and type <b>uname -m</b> to find the
+machine (hardware) type is i686. Note that UP=uniprocessor,
+SMP=simultaneous multiprocessor. Also, <b>dmesg</b> gives a lot of
+useful system information.  </p>
+
+<p><b>Optimizing the hard disk</b>
+
+The default setting of support for 16-bit EIDE is on. However, modern
+hard disks are capable of 32-bit I/O. To check the options start a
+terminal and give the following command:
+
+hdparm /dev/hd* (a,b or c- this depends on your configuration. Try 'a' first)
+You will see something like this:
+mulcount = 0 (off)
+I/O support = 0 (default 16-bit)
+unmaskirq = 0 (off)
+using_dma = 0 (off)
+keepsettings = 0 (off)
+nowerr = 0 (off)
+readonly = 0 (off)
+readahead = 8 (on)
+geometry = 1240/255/63, sectors = 199311844, start = 0
+
+hdparm -Tt /dev/hda gives buffered and unbuffered performance figures for
+your hard disk-IDE controller combination.
+hdparm -c1 /dev/hda will set the disk to use 32-bit I/O
+hdparm -d1 /dev/hda enables DMA
+
+Test the performance by giving the command
+hdparm -Tt /dev/hda
+
+You should definitely see an improvement in performance.
+
+To keep the settings, type
+hdparm -k1 /dev/hda
+</p>
+
+
+<p>
+<b>Information on how to mount Windows disks without sweat:</b>
+</p>
+
+<ol>
+<li><a name="which"></a> <b>Which RPM ?</b> 
+
+<p> It is important to install exactly the same version of NTFS kernel
+module as the kernel you have installed. A quick way to find the
+version is to use the <b>whichrpm</b> script.  Save the file and run
+it. Then go to the <a href="#install">install section</a>.  This
+script, just automates what we will do next.  First we need to
+decide which release you have: <b>cat /etc/redhat-release</b>
+and you should see <b>e.g.</b> the following response: <b>Red Hat
+Linux release 7.3 (Valhalla)</b>. Next find out your kernel
+version: <b>uname -r</b>. You should see a response something
+<b>like</b> one of these: <b>2.4.18-3</b>. The version might also have
+one of the following suffixes: <i>smp bigmem BOOT</i>. If the result
+ends with <q>smp</q> then you have a multi-processor computer (you
+probably already knew that). Next find out what sort of processor you
+have.  This command will ask which rpm RedHat installed for you. Users
+with a multi-processor machine should replace <q>kernel</q> with
+<q>kernel-smp</q>: <b>rpm -q --queryformat "%{ARCH}\n" kernel</b>. 
+Most people will have an <q>i686</q> processor (a recent Pentium
+computer).  Other options are <q>athlon</q>, <q>i586</q> or
+<q>i386</q>. 
+</p>
+
+<li>
+<a name="install"></a>
+<b>Install</b>
+<p>
+You must be <b>root</b> for the rest of the commands.  The examples
+will continue as if you downloaded
+<b>kernel-ntfs-2.4.18-3.i686.rpm</b>.  Next install the rpm:
+<b>rpm -ihv kernel-ntfs-2.4.18-3.i686.rpm</b>. There should be no
+errors, just #'s.  Note: newer NTFS RPMs will also print a message
+telling you if install succeeded.  This is the only command we
+actually needed, but we'll go on and test what we have done. Next load
+the kernel module <b>/sbin/modprobe ntfs</b>. There should be no
+output.  If there are a lot of error messages, get help. Next,
+<b>dmesg | grep NTFS</b> should return <b>NTFS driver v1.1.22 [Flags:
+R/O MODULE]</b>. We can now check that the kernel <b>really</b>
+understands NTFS.  The output may vary slightly, but you are looking
+for the entry <q>ntfs</q>. 
+
+<p>
+<b>cat /proc/filesystems</b>
+    nodev   rootfs
+    nodev   bdev
+    nodev   proc
+    nodev   sockfs
+    nodev   tmpfs
+    nodev   shm
+    nodev   pipefs
+            ext3
+            ext2
+    nodev   ramfs
+    nodev   devpts
+            ntfs
+</p>
+<li>
+<a name="mount"></a>
+<b>Mount</b>
+
+First you need to know which device your NTFS Volume is on and you
+need to create a directory as a mount point. Type: <b>/sbin/fdisk
+-l</b>; the output might look like:
+
+<p>
+Disk /dev/hda: 64 heads, 63 sectors, 4465 cylinders
+Units = cylinders of 4032 * 512 bytes
+
+       Device Boot    Start       End    Blocks   Id  System
+       /dev/hda1             1      2125   4283968+  07  NTFS/HPFS
+       /dev/hda2          2126     19851  35735616   0f  Win95 Ext'd (LBA)
+       /dev/hda5   *      2126      4209   4201312+  83  Linux
+       /dev/hda6          4210      4465    516064+  82  Linux swap
+</p>          
+
+Then, type <b>mkdir /mnt/windows</b> and <b>mount /dev/hda1
+/mnt/windows -t ntfs -r -o umask=0222</b> if you want read-only, or
+<b>-o umask=002</b> for read-write (but that is not supported, it seems). See
+<b>man mount</b> for further options. Hopefully everything is working
+for you now. Check <i>/etc/mtab</i> and update <i>/etc/fstab</i> accordingly.
+</ol>
+
+<p>
+<b>Cascading style sheets</b>:
+</p>
+<p>
+It's not reading the first line. Add <-- Ignored {} -->
+</p>
+
+<p>
+<b>Tables</b>:
+</p>
+<p>
+Put align tags inside the individual (first) cells!
+</p>
+
+<p>
+<b>Sound support</b>:
+</p>
+<p>Type <b>esd</b>, then <b>realplayer</b>. Make sure ESDSound support
+is checked in the Preferences Performance  of RealPlayer.</p>
+<p>Check into <b>artsdsp</b> and <b>esd</b>. For RealPlayer 8 simply
+reboot and start sound support by typing <b>esd</b> (make sure
+ESDSound support is checked in the Preferences Performance 
+of RealPlayer.) Start RealPlayer as root and then it works; it is a
+permission thing, perhaps can be fixed by making <i>/dev/dsp</i>
+write-permissible, or using <b>/esdctl</b> or else <b>chown -R
+fjsimons:fjsimons /tmp/.esd</b> First, type <b>artsdsp</b>, then
+<b>esd</b>, then <b>realplayer</b>. Change permissions if necessary. 
+</p>
+
+<p>
+<b>Installing the APACHE server</b>:
+</p>
+<p>Download and install <b>apache-1.3.23-11.i386.rpm</b>.
+<p>Turn it on: <b>service httpd start</b> and then <b>chkconfig httpd</b>.
+<p>Look at <i>/etc/httpd/conf/httpd.conf</i>
+<p>Web page is now <i>melchior.geophysics.princeton.edu</i> and
+content is located in <i>/var/www/</i>.
+
+
+<hr>
+<address><a href="mailto:fjsimons-at-alum.mit.edu">Frederik Simons</a></address>
+<!-- hhmts start -->
+Last modified: Tue Feb 17 10:54:08 EST 2004
+<!-- hhmts end -->
+</body> </html>

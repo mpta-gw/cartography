@@ -1,0 +1,79 @@
+<!DOCTYPE HTML PUBLIC -//IETF//DTD HTML//EN>
+<html>
+<head>
+<title>How to mount a file system</title>
+</head>
+<body bgcolor="#FFFFFF" link="#00009b" alink="#00009" vlink="#00009">
+
+<h2>How I mounted my SanDisk Cruzer thumb drive</h2>
+Look at /proc/bus/usb, mount /dev/sda1 /mnt/ubsname, look at
+/etc/mtab, etc. It all works in a snap. Cruzer is vfat.
+
+<h2>How to mount a file system</h2>
+
+<p> <b>fstab</b> is used by the </i>mount</i> command to know what
+filesystems go on what mount points, mostly for mounting them at
+startup.  <b>mtab</b> is used to keep track of what filesystems are
+mounted, right now. So if you want to to automount upon startup need
+to update <b>/etc/fstab</b> with the results of <b>/etc/mtab</b> after
+mounting, say, the Windows partition.  </p>
+
+On my machine:
+
+<ol>
+<li>Create <i>/mnt/whatever</i> directory. In this case: <i>/mnt/dalilocal</i> 
+<li>Add the following line to <i>/etc/fstab</i>:
+<ul><li>dali:/usr/local /mnt/dalilocal nfs
+exec,dev,suid,rw,bg,soft,intr 0 0</ul>
+<li>Some of this might be redundant but doesn't hurt:
+<ul><li>Update my <i>/etc/hosts</i> with 
+<ul><li>192.168.0.25 dali.geophysics.princeton.edu dali</ul>
+<li>Update <i>/etc/hosts.allow</i> with<ul><li>ALL: 192.168.0.25</ul>
+<li>Update <i>/etc/hosts.deny</i> with <ul><li>ALL:ALLatALL</ul> to deny access to all others
+</ol>
+
+On the machine whos disks are to be mounted on my machine:
+
+<ol>
+<li>Log in to it using <b>rlogin</b> and become superuser with <b>su</b>
+<ul><li>Update its <i>/etc/hosts</i> file with
+<ul><li>192.168.0.46 melchior.geophysics.princeton.edu melchior</ul>
+<li>Update its <i>/etc/hosts.allow</i> file with
+<ul><li>ALL: 192.168.0.46</ul>
+<li>Update <i>/etc/exports</i> by adding
+<ul><li>/usr/local melchior.geophysics.princeton.edu(rw)</ul></ul>
+<li>Run <b>exportfs -av</b>. This will update <i>/var/lib/nfs/xtab</i>
+by adding my info like:
+<ul><li>/usr/local melchior.geophysics.princeton.edu
+(rw,async,wdelay,secure,root_squash,no_all_squash,mapping=identity,anonuid=-2,anongid=-2)</ul> 
+<li>Might have a problem that requires restarting nfs file servers and
+portmap utilities:
+<ul><li><b>/etc/rc.d/init.d/nfs restart</b>
+<li><b>/etc/rc.d/init.d/nfslock restart</b>
+<li><b>/etc/rc.d/init.d/portmap restart</b></ul>
+</ol>
+
+On my machine:
+
+<ol>
+<li>Run <b>mount -av</b> to activate or explicitly: <b>mount dali:/usr/local /mnt/dalilocal</b>.
+<li><b>mount</b> by itself will give you a status.
+</ol>
+
+Got errors about RPC, portmap, etc. Was not working. The problem:
+Needed to turn off <b>ipchains</b> (which determines how the firewall
+is implemented) on my machine on all levels. See under <a
+href="network.html">network</a>. Mount then worked. 
+
+Second time, got complaint that <i>mount: RPC: Program not
+registered</i>. Explicitly adding dali into my /ect/hosts.allow file
+didn't help. Went through the steps above and did everyting explicitly
+(without assuming anything would be redundant) and it worked beautifully.
+
+
+<hr>
+<address><a href="mailto:fjsimons-at-alum.mit.edu">Frederik Simons</a></address>
+<!-- hhmts start -->
+Last modified: Thu Feb  5 15:53:10 EST 2004
+<!-- hhmts end -->
+</body> </html>

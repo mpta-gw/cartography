@@ -1,0 +1,35 @@
+<style type="text/css">
+<-- Ignored {} -->
+BODY,TD,TH {
+color: black;
+font-family: Helvetica, Arial, sans-serif;
+font-size: 10pt; 
+font-style: normal; 
+line-height: 12pt; 
+}
+H2 {
+color: red;
+font-size: 13pt; 
+line-height: 12pt; 
+}
+H4 {
+color: blue;
+font-weight: bold;  
+font-size: 14pt; 
+line-height: 14pt;  
+font-family: helvetica, arial, sans-serif;
+font-style: normal;
+}
+H5 {color: black;
+font-weight: normal; 
+font-size: 10pt;
+line-height: 10pt; 
+font-family: helvetica, arial, sans-serif; 
+font-style: normal;
+}
+TT,PRE {
+font-family: monospace; 
+}
+A {text-decoration: none;   
+}  
+</style>
