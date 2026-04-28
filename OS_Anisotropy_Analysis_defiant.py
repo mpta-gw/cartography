@@ -113,7 +113,7 @@ def main():
                                      args.datapath + '/tim/',
                                      psr_list)
         
-        with open(args.data+'psrs.pkl', 'wb') as psrpickle:
+        with open(args.datapath+'/psrs.pkl', 'wb') as psrpickle:
             pickle.dump(PSRs, psrpickle)
         psrpickle.close()
     
@@ -127,7 +127,7 @@ def main():
    
     # get positions of pulsars
     psrs_theta, psrs_phi = np.zeros(len(PSRs)), np.zeros(len(PSRs))
-    for pp, psr in PSRs:
+    for pp, psr in enumerate(PSRs):
         psrs_theta[pp] = psr.theta
         psrs_phi[pp] = psr.phi
         
